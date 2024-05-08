@@ -1,0 +1,57 @@
+When you type `https://www.google.com` in your browser and press Enter, a series of complex interactions occur behind the scenes to fetch and display the Google homepage. This process involves several key steps, including DNS resolution, HTTP/HTTPS requests, server processing, and rendering the web page. Below is a detailed explanation of this process, aiming to enhance the understanding of what happens under the hood.
+
+### Step 1: User Action
+
+- **Action**: The user types `https://www.google.com` into the browser's address bar and presses Enter.
+- **Objective**: To request the Google homepage from the server.
+
+### Step 2: DNS Resolution
+
+- **Action**: The browser sends a DNS query to resolve `www.google.com` to its IP address.
+- **Objective**: To find the server's IP address where the Google homepage is hosted.
+- **Outcome**: The DNS server responds with the IP address of the Google server.
+
+### Step 3: Establishing a Connection
+
+- **Action**: The browser initiates a TCP connection to the Google server's IP address on port 443 (for HTTPS).
+- **Objective**: To securely transmit the HTTP request.
+- **Outcome**: A TCP connection is established, and the browser sends an HTTPS request to the server.
+
+### Step 4: HTTPS Handshake
+
+- **Action**: The server responds with its SSL certificate.
+- **Objective**: To establish a secure connection using TLS/SSL.
+- **Outcome**: The browser verifies the server's certificate and establishes a secure connection.
+
+### Step 5: HTTP Request
+
+- **Action**: The browser sends an HTTP GET request to the server.
+- **Objective**: To request the Google homepage.
+- **Outcome**: The server processes the request.
+
+### Step 6: Server Processing
+
+- **Action**: The server receives the request, processes it, and generates the HTML content for the Google homepage.
+- **Objective**: To serve the requested web page.
+- **Outcome**: The server prepares the HTML content and other resources (like CSS and JavaScript files) needed to render the page.
+
+### Step 7: HTTP Response
+
+- **Action**: The server sends an HTTP response containing the HTML content and other resources.
+- **Objective**: To deliver the requested web page to the browser.
+- **Outcome**: The browser receives the response.
+
+### Step 8: Rendering the Web Page
+
+- **Action**: The browser parses the HTML content and renders the Google homepage.
+- **Objective**: To display the requested web page to the user.
+- **Outcome**: The user sees the Google homepage.
+
+### Additional Insights
+
+- **Caching**: Browsers and servers cache web pages and resources to reduce load times for subsequent requests.
+- **Load Balancers**: Large websites like Google use load balancers to distribute incoming requests across multiple servers, ensuring high availability and performance.
+- **Security**: HTTPS encrypts the data between the browser and the server, protecting against eavesdropping and man-in-the-middle attacks.
+- **Content Delivery Networks (CDNs)**: Google uses CDNs to serve content from servers closest to the user, reducing latency.
+
+This detailed explanation aims to provide a comprehensive understanding of the process that occurs when you type `https://www.google.com` in your browser and press Enter. It highlights the importance of each step in fetching and displaying a web page, from the initial DNS query to the final rendering of the page in the browser.
